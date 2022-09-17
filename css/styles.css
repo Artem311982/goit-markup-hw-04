@@ -223,8 +223,18 @@ img {
 }
 
 .hero {
-    background-color: var(--other-bg-cl);
+    max-width: 1600px;
     text-align: center;
+    height: 600px;
+    background-image: linear-gradient(
+        to right, 
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4) 
+        ), url(../images/block4/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--other-bg-cl);
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -268,9 +278,36 @@ img {
     color: var(--other-color-wight);
 }
 
-.feirst-list {
+.first-list {
     display: flex;
     gap: 30px;
+}
+
+.first-list-item:before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--btn-bg-cl);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+    background-image: url(../images/first-icons/antenna\ 1.svg);
+}
+
+.icon-clock::before {
+background-image: url(../images/first-icons/clock\ 1.svg);
+}
+
+.icon-diagram::before {
+background-image: url(../images/first-icons/diagram\ 1.svg);
+}
+
+.icon-astronaut::before {
+    background-image: url(../images/first-icons/astronaut\ 1.svg);
 }
 
 .title-three-in-benefits {
