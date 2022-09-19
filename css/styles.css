@@ -426,6 +426,11 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     color: var(--par-txt-cl);
 }
 
+.customers-list {
+    display: flex;
+    gap: 30px;
+}
+
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
