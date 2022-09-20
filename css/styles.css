@@ -18,8 +18,12 @@ html {
 --accent-bg-cl: #2196F3;
 --other-bg-cl: #2F303A;
 --btn-bg-cl: #F5F4FA;
+--icons-bg-cl: #F5F5F5;
 /* Other */
 --other-color-wight: #FFFFFF;
+/* Icons */
+--color-icon: #AFB1B8;
+--hover-icon: #2196F3;
 }
 
 *,
@@ -60,7 +64,7 @@ img {
 .page {    
     font-family: var(--main-font);
     font-size: 14px;
-
+max-width: 1600px;
     color: var(--main-txt-cl);
 
     letter-spacing: 0.03em;
@@ -222,6 +226,16 @@ img {
     color: var(--accent-txt-cl);
 }
 
+.group__link {
+    display: flex;
+    width: 161px;
+    height: 16px;
+}
+
+.group__link-icon {
+    fill: currentColor;
+}
+
 .hero {
     max-width: 1600px;
     text-align: center;
@@ -299,11 +313,11 @@ img {
 }
 
 .icon-clock::before {
-background-image: url(../images/first-icons/clock\ 1.svg);
+    background-image: url(../images/first-icons/clock\ 1.svg);
 }
 
 .icon-diagram::before {
-background-image: url(../images/first-icons/diagram\ 1.svg);
+    background-image: url(../images/first-icons/diagram\ 1.svg);
 }
 
 .icon-astronaut::before {
@@ -333,13 +347,43 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
 }
 
 .list-shadow {
-    background-color: #FFFFFF;
+    background-color: var(--other-color-wight);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 .our-team {
     background: var(--btn-bg-cl);
+}
+
+.our-team__icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.socile-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--color-icon);
+
+    border-radius: 50%;
+}
+
+.our-team-icon {
+fill: currentColor;
+}
+
+.socile-link:hover,
+.socile-link:focus {
+    color: var(--other-color-wight);
+    background-color: var(--hover-icon);
 }
 
 .our-projects {
@@ -408,7 +452,7 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     font-weight: 400;
     font-size: 16px;
     line-height: calc(19 / 16);
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 
     text-align: center;
     letter-spacing: 0.03em;
@@ -426,9 +470,47 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     color: var(--par-txt-cl);
 }
 
+.customers-title {
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    margin-bottom: 50px;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--main-txt-cl);
+}
+
 .customers-list {
     display: flex;
     gap: 30px;
+    justify-content: center;
+
+    background-color: var(--icons-bg-cl);
+}
+
+.customers-link {
+    color: var(--color-icon);
+}
+
+.customers-logo {
+    width: 170px;
+    height: 92px;
+    fill: currentColor;
+
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:active {
+    color: var(--accent-bg-cl);
+}
+
+.customers-logo:hover {
+    border: 1px solid var(--accent-bg-cl);
 }
 
 .footer {
@@ -436,6 +518,14 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     padding-bottom: 60px;
     background-color: var(--other-bg-cl);
     color: var(--other-color-wight);
+}
+
+.footer__box {
+    display: flex;
+}
+
+.footer__box-address {
+    margin-right: 70px;
 }
 
 .logo-footer {
@@ -466,6 +556,7 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     color: rgba(255, 255, 255, 0.6);
 }
 
+
 .address {
     font-style: normal;
 }
@@ -475,6 +566,49 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
     margin-bottom: 9px;
 }
 
+.footer-list__icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+ .footer-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    color: var(--other-color-wight);
+ }
+
+.footer-link__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--other-color-wight);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+}
+
+.footer-icons {
+    fill: currentColor;
+}
+
+.footer-link__icons:hover,
+.footer-link__icons:active {
+    color: var(--other-color-wight);
+    background-color: var(--hover-icon);
+}
+
 .footer-list .footer-list-item {
     margin-bottom: 9px;
 }
@@ -482,3 +616,4 @@ background-image: url(../images/first-icons/diagram\ 1.svg);
 .footer-list .footer-list-item:last-child {
     margin-bottom: 0;
 }
+
