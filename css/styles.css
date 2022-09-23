@@ -505,9 +505,6 @@ fill: currentColor;
 .customers-list {
     display: flex;
     gap: 30px;
-    
-
-    background-color: var(--icons-bg-cl);
 }
 
 .customers-link {
@@ -546,6 +543,8 @@ fill: currentColor;
 
 .footer__box {
     display: flex;
+    align-items: baseline;
+
 }
 
 .footer__box-address {
